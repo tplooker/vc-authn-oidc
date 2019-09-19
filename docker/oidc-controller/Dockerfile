@@ -22,6 +22,4 @@ WORKDIR /app
 
 COPY --from=build-env /app/out .
 
-COPY docker/oidc-controller/wait-for-it.sh .
-
 CMD ["dotnet", "VCAuthn.dll"]
